@@ -5,7 +5,7 @@ const cliente = {
     email: "gabrielstutz@gmail.com",
     fones: [999999999, 988888888],
     dependentes: [{
-        nome:"Sara",
+        nome:"Sara Thompson",
         parentesco:"filha",
         dataNasc:"20/03/2011"
     }, 
@@ -20,6 +20,15 @@ const cliente = {
     }
 }
 
-console.log(cliente.saldo)
-cliente.depositar(30)
-console.log(cliente.saldo)
+let relatorio = "";
+
+for ( let info in cliente) {
+    if(typeof cliente[info] === "object" || typeof cliente[info] === "function" ) {
+        continue;
+    } else {
+        relatorio += `
+        ${info}: ${cliente[info]}`;
+    }
+}
+
+console.log(relatorio);

@@ -20,6 +20,13 @@ const cliente = {
     }
 }
 
-console.log(cliente.saldo)
-cliente.depositar(30)
-console.log(cliente.saldo)
+function oferecerSeguro(obj) {
+    const propsCliente = Object.keys(obj);
+    if(propsCliente.includes("dependentes")) {
+        console.log(`Oferta de seguro de vida para ${obj.nome}`)
+    }
+}
+
+console.log(Object.values(cliente));
+console.log(Object.entries(cliente));
+oferecerSeguro(cliente);

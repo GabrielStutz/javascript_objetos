@@ -7,7 +7,7 @@ const cliente = {
     dependentes: [{
         nome:"Sara",
         parentesco:"filha",
-        dataNasc:"20032011"
+        dataNasc:"20/03/2011"
     }]
 }
 
